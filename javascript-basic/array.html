@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript - Array</title>
+</head>
+<body>
+    <script>
+        
+        document.writeln("<h1>Array in Javascript</h1>");
+        document.writeln("<p>Open the console tab in browser dev tools</p>");
+
+        let fruitList = ["Apple","Melon","Orange"];
+
+        console.info(fruitList);
+
+        console.info("push watermelon and banana");
+        fruitList.push("Watermelon");
+        fruitList.push("Banana");
+
+        console.info(fruitList);
+
+        console.info("delete last value");
+        fruitList.pop();
+
+        console.info(fruitList);
+
+        console.info("delete melon");
+        delete fruitList[1];
+
+        console.info(fruitList);
+
+    </script>
+</body>
+</html>
