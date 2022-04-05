@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    const sources = "https://prestige-theme-couture.myshopify.com/products.json";
+
+    // fetch(sources).then(function (response) {
+    //     return response.json();
+    // }).then(function (obj) {
+    //     console.info(obj);
+    // }).catch(function (error) {
+    //     console.error("Something went wrong with retrieving data")
+    //     console.error(error);
+    // });
+
+    // console.info(data);
+
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            let produk = JSON.parse(this.responseText);
+            let item = produk.products;
+            item.forEach((value, index) => {
+                document.getElementById("daftar-produk").append(value.title);
+            });
+        }
+    }
+    xhr.open('GET', sources, true);
+    xhr.send();
+
+</script>
+<div id="daftar-produk">
+    
+</div>
+</body>
+</html>
