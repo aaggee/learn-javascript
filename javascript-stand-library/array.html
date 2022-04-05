@@ -7,6 +7,88 @@
     <title>Document</title>
 </head>
 <body>
+
+    <script>
+
+        {
+            // array loop
+
+            const nama = ["Aldy", "Ginanjar", "Age"]
+
+            nama.forEach(function (value, index) {
+                console.info(`${index} : ${value}`);
+            })
+
+            nama.forEach((value, index) => console.info(`${index} : ${value}`));
+
+            nama.forEach(value => console.info(value));
+        }
+
+        {
+            // array queue
+
+            const antrian1 = [];
+
+            antrian1.push("Nama");
+            antrian1.push("Saya");
+            antrian1.push("Aldy");
+
+            console.info(antrian1.shift());
+            console.info(antrian1.shift());
+            console.info(antrian1.shift());
+        }
+
+        {
+            // array queue
+
+            const antrian2 = [];
+
+            antrian2.push("Nama");
+            antrian2.push("Saya");
+            antrian2.push("Aldy");
+
+            console.info(antrian2.pop());
+            console.info(antrian2.pop());
+            console.info(antrian2.pop());
+        }
+
+        {
+            // array search
+
+            const source = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+            console.info (source.find(value => value > 3));
+            console.info (source.findIndex(value => value > 3));
+            console.info (source.includes(7));
+            console.info (source.indexOf(5));
+            console.info (source.lastIndexOf(5));
+        }
+
+        {
+            // array filter
+
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            const ganjil = numbers.filter(value => value % 2 === 1);
+            const genap = numbers.filter(value => value % 2 === 0);
+
+            console.info(numbers);
+            console.info(ganjil);
+            console.info(genap);
+
+        }
+
+        {
+            // array transform
+
+            const names = "Aldy Ginanjar Age".split(" ");
+            console.info(names.map(value => value.toUpperCase()));
+
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            console.info(numbers.reduce((result, value) => result + value))
+            console.info(numbers.reduceRight((result, value) => result + value))
+        }
+
+    </script>
     
 </body>
 </html>
